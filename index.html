@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>起始页</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/a.css">
+
+
+</head>
+<body>
+    <img class="background-animate" id="bgbox" src="./BG_A_Default_1.jpg" style="display: block; opacity: 1;">
+    <h1 id="timet">00:00:00</h1>
+
+<!-- 搜索框 -->
+        <div class="search-container">
+            <form id="search-form" action="#">
+                
+                <input type="text" id="search-input" placeholder="在这里输入搜索内容，回车搜索">
+                <button id="search-button">搜索</button>
+            </form>
+            <div class="search-container">
+                <div class="search-engine-container">
+                    <label for="search-engine">搜索引擎：</label>
+                    <select id="search-engine" name="search-engine" class="custom-select">
+                        <option value="https://www.google.com/search?q=">Google</option>
+                        <option value="https://www.bing.com/search?q=">Bing</option>
+                        <option value="https://www.duckduckgo.org/?q=">Duckduckgo</option>
+                        <option value="https://www.youtube.com/results?search_query=">Youtube</option>
+                        <option value="https://www.baidu.com/s?wd=">Baidu</option>
+                        <option value="https://search.bilibili.com/all?keyword=">Bilibili</option>
+                        <option value="https://zh.wikipedia.org/w/index.php?search=">Wikipedia_ZH</option>
+                      </select>
+                </div>
+        </div>
+    </div>
+    
+<!-- 标签 -->
+    <div class="container">
+        <div class="container">
+            <ul>
+                <li><button onclick="location='https://www.bilibili.com'" id="list_bilibili" class="lia">Bilibili</button></li>
+                <li><button onclick="location='https://www.youtube.com'" id="list_google_youtube"class="lia">Youtube</button></li>
+                <li><button onclick="location='https://email.163.com'" id="list_163mail"class="lia">网易邮箱</button></li>
+                <li><button onclick="location='https://email.google.com'" id="list_google_mail"class="lia">G</span>oogle email</button></li>
+                <li><button onclick="location='https://map.google.com'" id="list_google_map"class="lia">Google map</button></li>
+                <li><button onclick="location='https://translate.google.com'" id="list_google_Translation"class="lia">Google Translation</button></li>
+            </ul>
+        </div>
+    
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
