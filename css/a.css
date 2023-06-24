@@ -217,3 +217,7 @@ select::-ms-expand {
 #list_163mail:hover{
   background-color: rgb(255, 20, 20,0.5); /* 设置背景颜色为网易邮箱橙色 */
 }
+#list_github:hover{
+  background-color: rgba(0, 0, 0, 0.8);;
+  color: rgba(255,255,255,0.8);
+}
