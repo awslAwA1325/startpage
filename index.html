@@ -15,11 +15,12 @@
         <div class="search-container">
             <form id="search-form" action="#">
                 
-                <input type="text" id="search-input" placeholder="在这里输入搜索内容，回车搜索">
-                <button id="search-button">搜索</button>
+                <input type="text" class="search-input-bug" id="search-input" placeholder="在这里输入搜索内容，回车搜索">
+                <button type="submit" id="search-button">🔍搜索</button>
             </form>
             <div class="search-container">
                 <div class="search-engine-container">
+                    
                     <label for="search-engine">搜索引擎：</label>
                     <select id="search-engine" name="search-engine" class="custom-select">
                         <option value="https://www.google.com/search?q=">Google</option>
@@ -33,6 +34,7 @@
                         <option value="https://github.com/search?q=">Github</option>
 
                     </select>
+
                 </div>
         </div>
     </div>
@@ -40,14 +42,15 @@
 <!-- 标签 -->
     <div class="container">
         <div class="container">
-            <ul>
+            <ul id="likelist">
                 <li><button onclick="location='https://www.bilibili.com'" id="list_bilibili" class="lia">Bilibili</button></li>
                 <li><button onclick="location='https://www.youtube.com'" id="list_google_youtube"class="lia">Youtube</button></li>
-                <li><button onclick="location='https://mail.163.com'" id="list_163mail"class="lia">网易邮箱</button></li>
-                <li><button onclick="location='https://mail.google.com'" id="list_google_mail"class="lia">G</span>oogle email</button></li>
+                <li><button onclick="location='https://email.163.com'" id="list_163mail"class="lia">网易邮箱</button></li>
+                <li><button onclick="location='https://email.google.com'" id="list_google_mail"class="lia"></span><div id="google">Google email</div></button></li>
                 <li><button onclick="location='https://map.google.com'" id="list_google_map"class="lia">Google map</button></li>
                 <li><button onclick="location='https://translate.google.com'" id="list_google_Translation"class="lia">Google Translation</button></li>
-                <li><button onclick="location='https://www.github.com'" id="list_github"class="lia">Github</button></li>
+                <li><button onclick="location='https://www.github.com'" id="list_github" class="lia">Github</button></li>
+                <li><button id="add-item-before" class="lia">add</button></li>
             </ul>
         </div>
     

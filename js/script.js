@@ -1,6 +1,7 @@
 // 获取元素
 const searchForm = document.getElementById('search-form');
 const searchButton = document.getElementById('search-button');
+
 const searchInput = document.getElementById('search-input');
 const searchEngineSelect = document.getElementById('search-engine');
 
@@ -54,5 +55,10 @@ function updateTime() {
   
   // 每秒更新一次时间
   setInterval(updateTime, 1000);
-  const selectElement = document.querySelector('.custom-select');
-
+ /* const selectElement = document.querySelector('likelist');
+  document.getElementById('add-item').addEventListener('click', function() {
+    const fruitList = document.getElementById('likelist');
+    const newFruit = document.createElement('li');
+    newFruit.textContent = '橙子';
+    fruitList.appendChild(newFruit);
+  });*/

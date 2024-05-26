@@ -7,7 +7,7 @@ body {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    background-image: url("../BG_A_Default_1.jpg");
+    background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -54,28 +54,35 @@ a:hover {
 }
 
 .search-container input[type="text"] {
+  letter-spacing: 5px;
+    text-align: center;  
     word-wrap: break-word;  
     padding: 8px;
-    width: 300px;
+    width: 24%;
     height: 30px;
     font-size: large;
     transition: background-color 0.3s ease;
-    background-color: rgba(255, 255, 255, 0); /* 初始背景颜色 */
-    transition: width 0.5s ease,background-color 0.5s ease;
+    background-color: rgba(245, 245, 220, 0.05); /* 初始背景颜色 */
+    backdrop-filter: blur(2px);
+    transition: width 0.5s ease,background-color 0.5s ease,height 0.5s ease,backdrop-filter 0.5s ease,letter-spacing 0.55s ease;
     border: none;  /* hide 搜索框的边框 */
     border-radius: 10px;
     
 }
 .search-container input[type="text"]:focus {
     outline: none;
+    letter-spacing: 1px;
     /* animation: background-animation 0.3s forwards; */
-    width: 90%;
-    background-color: rgba(245, 245, 220,0.8);
+    width: calc(88% - 20px);
+    height: 35px;
+    background-color: rgba(245, 245, 220,0.6);
+    backdrop-filter: blur(100%);
   }
   .search-container input[type="text"]:hover{
-    width: 95%;
+    width: calc(90% - 20px);
+    letter-spacing: 1px;
     /* animation:searchhover 0.3s forwards; */
- 
+    backdrop-filter: blur(10px);
     background-color: rgba(245, 245, 220,0.8);
     
   }
@@ -101,6 +108,9 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    word-wrap: break-word;
     text-align: center;
     list-style: none;
     width: 100%;
@@ -111,7 +121,7 @@ ul {
     padding: 10px;
     text-align: center;
     color: #fff;
-
+    
   }
 
   .container {
@@ -129,6 +139,44 @@ ul {
 li {
   margin: 10px;
 }
+
+@media (min-width: 1024px) {
+  ul {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  }
+}
+
+/* 中等屏幕时，每行显示 3 个按钮 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  ul {
+      grid-template-columns: repeat(3, 1fr);
+
+  }
+  .search-input:hover {
+    width:100px ;
+  }
+}
+
+/* 小屏幕时，每行显示 2 个按钮 */
+@media (max-width: 767px) {
+  ul {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .search-container input[type="text"]:hover{
+    width: calc(90% - 50px);
+    
+  }
+  .search-container input[type="text"]:focus {
+
+    width: calc(88% - 50px);
+
+  }
+  }
+
+
+/* 超小屏幕时，每行显示 1 个按钮 */
+
+
 /* 默认列表的按钮 */
 .lia{
     color: #000000;
@@ -146,8 +194,10 @@ li {
 .lia:hover{
     /* width: 50%; */
     /* animation: buttona 0.3s forwards; */
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.6);
     border-radius: 60px;
+    /*width: 105%;*/
+    width: calc(100% - 40px);
     /* font-size: medium; */
   }
 
@@ -185,15 +235,27 @@ select::-ms-expand {
     right: 6px;
     transform: translateY(-50%);
   }
-  /* 隐藏searchbutton */
-  #search-button{
-    display: none;
+
+  #search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s,;
+  }
+
+  #search-button:hover {
+    background-color: rgba(0, 86, 179,0.9);
   }
 
 /* bilibili */
 #list_bilibili:hover{
   background-color: rgba(0, 153, 299, 0.5);
   color: #fff;
+
 }
 /* yt */
 #list_google_youtube:hover{
@@ -208,4 +270,6 @@ select::-ms-expand {
   background-color: rgba(0, 0, 0, 0.8);;
   color: rgba(255,255,255,0.8);
 }
-
+/* .search-button1{
+  background: #fff;
+} */
