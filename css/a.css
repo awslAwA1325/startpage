@@ -1,49 +1,30 @@
-
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* transition:background-size 0.3s ease ; */
-/* 定义动画 */
-
-  }
-
+body{
+  overflow: hidden
+  
+}
+.background {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN) no-repeat center center;
+      background-size: cover;
+      z-index: 0;
+      transition: filter 0.3s ease , transform 0.3s ease;
+    }
+.blurred {
+      filter: blur(5px);
+      transform: scale(105%);
+    }
 
 html{
     height: 100%;
     touch-action: manipulation;
 }
 h1 {
-    text-align: center;
+  position: relative;  
+  text-align: center;
     padding: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 /* search-container */
 
@@ -100,110 +81,10 @@ a:hover {
     background-color: #555;
 }
 
-/* Webside list of StartPage */
-ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 3 列 */
-    grid-gap: 3px; /* 列间距 */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    word-wrap: break-word;
-    text-align: center;
-    list-style: none;
-    width: 100%;
-}
-/* 列表 */
-  li {
-    position: relative;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    
-  }
-
-  .container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 60%;
-  width: 100%;
-}
-.content {
-  flex: 1;
-}
-
-
-li {
-  margin: 10px;
-}
-
-@media (min-width: 1024px) {
-  ul {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-  }
-}
-
-/* 中等屏幕时，每行显示 3 个按钮 */
-@media (min-width: 768px) and (max-width: 1023px) {
-  ul {
-      grid-template-columns: repeat(3, 1fr);
-
-  }
-  .search-input:hover {
-    width:100px ;
-  }
-}
-
-/* 小屏幕时，每行显示 2 个按钮 */
-@media (max-width: 767px) {
-  ul {
-      grid-template-columns: repeat(2, 1fr);
-  }
-  .search-container input[type="text"]:hover{
-    width: calc(90% - 50px);
-    
-  }
-  .search-container input[type="text"]:focus {
-
-    width: calc(88% - 50px);
-
-  }
-  }
-
-
-/* 超小屏幕时，每行显示 1 个按钮 */
-
-
-/* 默认列表的按钮 */
-.lia{
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    font-size: large;
-    backdrop-filter: blur(2px);
-    height: 50px;
-    width: 100%;
-    border-radius: 10px;
-    
-    transition: width 0.3s ease,background-color 0.5s ease ,color 0.3s ease,border-radius 0.5s ease,backdrop-filter 0.3s ease;
-    
-}
-.lia:hover{
-    /* width: 50%; */
-    /* animation: buttona 0.3s forwards; */
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 60px;
-    /*width: 105%;*/
-    width: calc(100% - 40px);
-    /* font-size: medium; */
-  }
-
-
   /* 浏览器搜索引擎选择 */
+  /* Select the search engine in the search box */
   select {
+    position: relative;
     background-color: #f2f2f200;
     border: none;
     padding: 6px;
@@ -223,9 +104,9 @@ li {
     
   }
 
-/* 自定义选择框的下拉箭头样式 */
+
 select::-ms-expand {
-  display: none; /* 隐藏IE浏览器的下拉箭头 */
+  display: none; 
 }
   
   select::after {
@@ -237,6 +118,7 @@ select::-ms-expand {
   }
 
   #search-button {
+    position: relative;  
     padding: 10px 20px;
     font-size: 16px;
     color: white;
@@ -250,26 +132,3 @@ select::-ms-expand {
   #search-button:hover {
     background-color: rgba(0, 86, 179,0.9);
   }
-
-/* bilibili */
-#list_bilibili:hover{
-  background-color: rgba(0, 153, 299, 0.5);
-  color: #fff;
-
-}
-/* yt */
-#list_google_youtube:hover{
-  background-color: rgba(255, 0, 0, 0.8);
-  color: #fff;
-}
-/* 163 */
-#list_163mail:hover{
-  background-color: rgb(255, 20, 20,0.5); /* 设置背景颜色为网易邮箱橙色 */
-}
-#list_github:hover{
-  background-color: rgba(0, 0, 0, 0.8);;
-  color: rgba(255,255,255,0.8);
-}
-/* .search-button1{
-  background: #fff;
-} */
