@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>    
-    <title>起始页</title>
+    <title>StartPage</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/a.css">
 
 
 </head>
-<body>
-    <!-- <img class="background-animate" id="bgbox" src="./BG_A_Default_1.jpg" style="display: block; opacity: 1;"> -->
-    <h1 id="timet">00:00:00</h1>
-
-<!-- 搜索框 -->
-        <div class="search-container">
+<body >
+    
+    <div class="background" id="bg"></div>
+    <div class="search-container">
+            <h1 id="timet">00:00:00</h1>
             <form id="search-form" action="#">
-                
-                <input type="text" class="search-input-bug" id="search-input" placeholder="在这里输入搜索内容，回车搜索">
-                <button type="submit" id="search-button">🔍搜索</button>
+                <input type="text" id="search-input" placeholder="Press Enter to search">
+                <button type="submit" id="search-button">🔍Search</button>
             </form>
-            <div class="search-container">
+        <div class="search-container">
                 <div class="search-engine-container">
                     
-                    <label for="search-engine">搜索引擎：</label>
+                    <label style="position: relative;" for="search-engine">Search Engine</label>
                     <select id="search-engine" name="search-engine" class="custom-select">
                         <option value="https://www.google.com/search?q=">Google</option>
                         <option value="https://www.bing.com/search?q=">Bing</option>
                         <option value="https://www.duckduckgo.org/?q=">Duckduckgo</option>
-                        <option value="https://www.youtube.com/results?search_query=">Youtube</option>
-                        <option value="https://www.baidu.com/s?wd=">Baidu</option>
+                        <option value="https://www.youtube.com/results?search_query=">YouTube</option>
                         <option value="https://search.bilibili.com/all?keyword=">Bilibili</option>
                         <option value="https://zh.wikipedia.org/w/index.php?search=">Wikipedia_ZH</option>
                         <option value="https://www.so.com/s?&q=">360</option>
