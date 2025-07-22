@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
+<html lang="en"></html>
 <head>    
     <title>StartPage</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/a.css">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body >
     
@@ -14,7 +14,7 @@
             <h1 id="timet">00:00:00</h1>
             <form id="search-form" action="#">
                 <input type="text" id="search-input" placeholder="Press Enter to search">
-                <button type="submit" id="search-button">🔍Search</button>
+                
             </form>
         <div class="search-container">
                 <div class="search-engine-container">
@@ -28,13 +28,20 @@
                         <option value="https://search.bilibili.com/all?keyword=">Bilibili</option>
                         <option value="https://zh.wikipedia.org/w/index.php?search=">Wikipedia_ZH</option>
                         <option value="https://github.com/search?q=">Github</option>
-
+                        
                     </select>
-
+                    <button type="submit" id="search-button">🔍Search</button>
                 </div>
         </div>
+        
+
     </div>
-    
+    <footer class="footer_style">
+        <a>Other language:</a>
+        <a class="footer_a_style" href="index_zh_cn.html">简体中文</a>
+         |
+        <a class="footer_a_style" href="./About.html">About</a>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 </html>

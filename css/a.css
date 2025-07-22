@@ -126,9 +126,24 @@ select::-ms-expand {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s,;
+    transition: background-color 0.1s;
   }
 
   #search-button:hover {
     background-color: rgba(0, 86, 179,0.9);
   }
+.footer_style{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 30px;
+  background: rgba(250, 250, 250, 0.5); /* 半透明白底 */
+  /*z-index: 9999;  保证图层最前 */
+  padding: 10px;
+  text-align: center;
+
+}
+.footer_a_style{
+  text-decoration: none;
+}
